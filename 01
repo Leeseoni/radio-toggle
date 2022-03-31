@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <fieldset class="question">
+        <label for="coupon_question">Do you have a coupon?</label>
+        <input class="coupon_question" type="checkbox" name="coupon_question" value="1" />
+        <span class="item-text">Yes</span>
+    </fieldset>
+ 
+    <fieldset class="answerA">
+        <label for="coupon_field">Your coupon1:</label>
+        <input type="text" name="coupon_field" id="coupon_field"/>
+    </fieldset>
+     <fieldset class="answerB">
+        <label for="coupon_field">Your coupon2:</label>
+        <input type="text" name="coupon_field" id="coupon_field"/>
+    </fieldset>
+    
+    <script type="text/javascript">
+    $(".answerB").hide();
+    $(".coupon_question").click(function() {
+        if($(this).is(":checked")) {
+            $(".answerB").show();
+            $(".answerA").hide();
+        } else {
+            $(".answerB").hide();
+            $(".answerA").show();
+        }
+    });
+    </script>
+</body>
+</html>
